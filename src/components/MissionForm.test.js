@@ -12,7 +12,7 @@ test("MissionForm renders correctly", () => {
 
 test("Renders a loading message when isFetchingData is true", () => {
     render(<MissionForm isFetchingData={true} />);
-
+    const message = getByText(/we are fetching data/i);
 });
 
 test("Renders a button when isFetchingData is false", () => {
