@@ -41,6 +41,7 @@ test("Calls getData function on button click", () => {
 
     // Assert that our mock function was called
     expect(mockGetData).toHaveBeenCalledTimes(1);
+    expect(mockGetData.mock.calls).toHaveLength(1); // alternative syntax to the above assertion
 })
 
 // Forget about DRY in your tests
