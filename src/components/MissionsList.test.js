@@ -11,8 +11,7 @@ import MissionsList from "./MissionsList";
 test("MissionsList displays mission names when rerendered with new data", () => {
     const { rerender } = render(<MissionsList missions={[]} />);
 
-    let renderedMissions = screen.getAllByTestId("mission");
-
-
+    let renderedMissions = screen.queryByTestId("mission");
+    expect(renderedMissions).toBeNull();
 
 })
