@@ -33,6 +33,9 @@ test("Renders a button if not currently fetching data", () => {
 });
 
 // test that it fetches from the api on click
+test("Calls getData function on button click", () => {
+
+})
 
 // Forget about DRY in your tests
 // Instead: AHA - avoid hasty abstractions
