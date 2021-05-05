@@ -1,5 +1,5 @@
 import React from "react";
-import {render} from "@testing-library/react"
+import {screen, render} from "@testing-library/react"
 import MissionForm from "./MissionForm";
 
 // BDD / TDD: write the tests first, then implement the functionality to make the tests go from red to green
@@ -19,6 +19,7 @@ test("Renders a loading message when isFetchingData is true", () => {
 
 test("Renders a button when isFetchingData is false", () => {
     render(<MissionForm isFetchingData={false} />);
+    const button = screen.getByRole("button");
 });
 
 // Forget about DRY in your tests
