@@ -12,7 +12,9 @@ test("MissionForm renders correctly", () => {
 
 test("Renders a loading message when isFetchingData is true", () => {
     const { getByText } = render(<MissionForm isFetchingData={true} />);
-    const message = getByText(/we are fetching data/i);
+    const message = getByText(/we are fetching data/i); // implicit assertion already here
+
+    expect(message).toBeInTheDocument(); // not necessary, but why not!
 });
 
 test("Renders a button when isFetchingData is false", () => {
