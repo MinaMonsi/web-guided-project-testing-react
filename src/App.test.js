@@ -19,4 +19,7 @@ test("renders without blowing up the spaceships!", () => {
 test("fetches and renders data from the spaceX API", () => {
     render(<App />);
     mockFetchMissions.mockResolvedValueOnce(mockApiResponse);
+
+    const button = screen.getByRole("button");
+    fireEvent.click(button);
 })
