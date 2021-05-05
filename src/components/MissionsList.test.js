@@ -9,5 +9,10 @@ import MissionsList from "./MissionsList";
 // Sad path: rerender. props.error contains an error message to display
 
 test("MissionsList displays mission names when rerendered with new data", () => {
-    render(<MissionsList missions={[]} />);
+    const { rerender } = render(<MissionsList missions={[]} />);
+
+    let renderedMissions = screen.getAllByTestId("mission");
+
+
+
 })
