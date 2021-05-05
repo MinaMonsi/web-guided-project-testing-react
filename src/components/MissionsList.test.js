@@ -21,4 +21,17 @@ test("MissionsList displays mission names when rerendered with new data", () => 
     rerender(<MissionsList missions={mockData} />);
     renderedMissions = screen.getAllByTestId("mission");
     expect(renderedMissions).toHaveLength(4);
+});
+
+// Also test the sad path :(
+test("MissionsList displays an error message when the api call fails", () => {
+    const { rerender } = render(<MissionsList missions={[]} />);
+
+    let renderedMissions = screen.queryByTestId("mission");
+    expect(renderedMissions).toBeNull();
+
+    // Simulate a failing api call, leading to a props change that triggers a rerender
+    rerender(<MissionsList missions={[]} />);
+    renderedMissions = screen.getAllByTestId("mission");
+    expect(renderedMissions).toHaveLength(4);
 })
