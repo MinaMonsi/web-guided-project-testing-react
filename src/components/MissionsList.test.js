@@ -15,6 +15,9 @@ test("MissionsList displays mission names when rerendered with new data", () => 
     expect(renderedMissions).toBeNull();
 
     // Simulate a successful api call, leading to a props change that triggers a rerender
+    rerender(<MissionsList missions={[]});
+    renderedMissions = screen.getAllByTestId("mission");
+
 
 
 })
