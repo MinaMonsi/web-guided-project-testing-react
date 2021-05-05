@@ -8,7 +8,7 @@ import MissionsList from "./components/MissionsList";
 export default function App() {
   const [isFetchingData, setIsFetchingData] = useState(false);
   const [error, setError] = useState("");
-  const [missions, setMissions] = useState();
+  const [missions, setMissions] = useState([]);
 
   const getData = () => {
     setIsFetchingData(true);
