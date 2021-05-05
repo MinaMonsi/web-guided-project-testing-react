@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, screen, render, wait } from "@testing-library/react"
+import { fireEvent, screen, render, wait, waitFor } from "@testing-library/react"
 import App from "./App";
 
 import mockFetchMissions from "./api/fetchMissions";
@@ -23,8 +23,8 @@ test("fetches and renders data from the spaceX API", async () => {
     const button = screen.getByRole("button");
     fireEvent.click(button);
 
-    await wait();
-
-    const renderedMissions = screen.getAllByTestId("mission");
-    expect(renderedMissions).toHaveLength(2);
+    await waitFor(() => {
+        const renderedMissions = screen.findAllByTestId("mission");
+        expect(renderedMissions).toHaveLength(2);
+    });
 })
