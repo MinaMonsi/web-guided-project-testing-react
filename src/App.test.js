@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, screen, render } from "@testing-library/react"
+import { fireEvent, screen, render, wait } from "@testing-library/react"
 import App from "./App";
 
 import mockFetchMissions from "./api/fetchMissions";
@@ -16,10 +16,13 @@ test("renders without blowing up the spaceships!", () => {
     render(<App />);
 });
 
-test("fetches and renders data from the spaceX API", () => {
+test("fetches and renders data from the spaceX API", async () => {
     render(<App />);
     mockFetchMissions.mockResolvedValueOnce(mockApiResponse);
 
     const button = screen.getByRole("button");
     fireEvent.click(button);
+
+    await wait();
+
 })
