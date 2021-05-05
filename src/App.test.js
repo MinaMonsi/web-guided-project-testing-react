@@ -25,6 +25,6 @@ test("fetches and renders data from the spaceX API", async () => {
 
     await wait();
 
-    const renderedMissions = screen.getByTestId("mission");
+    const renderedMissions = screen.getAllByTestId("mission");
     expect(renderedMissions).toHaveLength(2);
 })
