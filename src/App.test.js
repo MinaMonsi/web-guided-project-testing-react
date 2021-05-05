@@ -18,7 +18,5 @@ test("renders without blowing up the spaceships!", () => {
 
 test("fetches and renders data from the spaceX API", () => {
     render(<App />);
-    mockFetchMissions.mockResolvedValueOnce({
-
-    })
+    mockFetchMissions.mockResolvedValueOnce(mockApiResponse);
 })
