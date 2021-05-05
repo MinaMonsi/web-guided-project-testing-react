@@ -34,7 +34,8 @@ test("Renders a button if not currently fetching data", () => {
 
 // test that it fetches from the api on click
 test("Calls getData function on button click", () => {
-
+    const mockGetData = jest.fn(() => { return "hi josh" });
+    render(<MissionForm getData={something} />);
 })
 
 // Forget about DRY in your tests
