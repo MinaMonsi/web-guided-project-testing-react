@@ -23,12 +23,16 @@ test("Renders a loading message when isFetchingData is true", () => {
 
 test("Renders a button when isFetchingData is false", () => {
     render(<MissionForm isFetchingData={false} />);
-    const button = screen.getByRole("button");
+    const button = screen.getByRole("button"); // implicit assertion that 1 and only 1 button is in the DOM
+
+    expect(button).toHaveTextContent(/get data/i);
 
     // Also assert that the loading message doesn't render in this case
     const message = screen.queryByText(/we are fetching data/i);
     expect(message).toBeNull();
 });
+
+// test that it fetches from the api on click
 
 // Forget about DRY in your tests
 // Instead: AHA - avoid hasty abstractions
