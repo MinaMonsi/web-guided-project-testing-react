@@ -15,11 +15,19 @@ test("Renders a loading message when isFetchingData is true", () => {
     const message = getByText(/we are fetching data/i); // implicit assertion already here
 
     expect(message).toBeInTheDocument(); // not necessary, but why not!
+
+    // Also assert that the button doesn't render in this case
+    const message = screen.queryByRole("button");
+    expect(message).toBeNull();
 });
 
 test("Renders a button when isFetchingData is false", () => {
     render(<MissionForm isFetchingData={false} />);
     const button = screen.getByRole("button");
+
+    // Also assert that the loading message doesn't render in this case
+    const message = screen.queryByText(/we are fetching data/i);
+    expect(message).toBeNull();
 });
 
 // Forget about DRY in your tests
