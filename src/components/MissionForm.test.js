@@ -6,4 +6,6 @@ import MissionForm from "./MissionForm";
 
 test("MissionForm renders correctly", () => {
     render(<MissionForm />);
-})
+});
+
+// test the logic for when the button displays vs displaying a loading message (based off the isFetchingData prop)
