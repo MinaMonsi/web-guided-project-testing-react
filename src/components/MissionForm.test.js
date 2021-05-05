@@ -11,7 +11,7 @@ test("MissionForm renders correctly", () => {
 // test the logic for when the button displays vs displaying a loading message (based off the isFetchingData prop)
 
 test("Renders a loading message when isFetchingData is true", () => {
-    render(<MissionForm isFetchingData={true} />);
+    const { getByText } = render(<MissionForm isFetchingData={true} />);
     const message = getByText(/we are fetching data/i);
 });
 
