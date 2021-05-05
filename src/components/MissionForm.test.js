@@ -12,11 +12,11 @@ test("MissionForm renders correctly", () => {
 
 test("Renders a loading message when isFetchingData is true", () => {
     render(<MissionForm />);
-})
+});
 
 test("Renders a button when isFetchingData is false", () => {
     render(<MissionForm />);
-})
+});
 
 // Forget about DRY in your tests
 // Instead: AHA - avoid hasty abstractions
