@@ -2,6 +2,8 @@ import React from "react";
 import { fireEvent, screen, render } from "@testing-library/react"
 import App from "./App";
 
+import { fetchMissions } from "./api/fetchMissions";
+
 test("renders without blowing up the spaceships!", () => {
     render(<App />);
 });
