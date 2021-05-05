@@ -11,11 +11,12 @@ test("MissionForm renders correctly", () => {
 // test the logic for when the button displays vs displaying a loading message (based off the isFetchingData prop)
 
 test("Renders a loading message when isFetchingData is true", () => {
-    render(<MissionForm />);
+    render(<MissionForm isFetchingData={true} />);
+
 });
 
 test("Renders a button when isFetchingData is false", () => {
-    render(<MissionForm />);
+    render(<MissionForm isFetchingData={false} />);
 });
 
 // Forget about DRY in your tests
