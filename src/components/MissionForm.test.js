@@ -10,10 +10,10 @@ test("MissionForm renders correctly", () => {
 
 // test the logic for when the button displays vs displaying a loading message (based off the isFetchingData prop)
 
-test("does something when isFetchingData is true", () = {
+test("does something when isFetchingData is true", () => {
     render(<MissionForm />);
 })
 
-test("does something when isFetchingData is false", () = {
+test("does something when isFetchingData is false", () => {
     render(<MissionForm />);
 })
