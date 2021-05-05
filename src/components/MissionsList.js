@@ -7,7 +7,7 @@ const MissionsList = props => {
         <div className="error">{props.error}</div>
       ) : (
         <div>
-          {props.missions.map(mission => (
+          {props.missions && props.missions.map(mission => (
             <div className="mission" data-testid="mission" key={mission.mission_id}>
               {mission.mission_name}
             </div>
