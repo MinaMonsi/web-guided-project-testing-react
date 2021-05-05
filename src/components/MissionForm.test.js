@@ -17,8 +17,8 @@ test("Renders a loading message when isFetchingData is true", () => {
     expect(message).toBeInTheDocument(); // not necessary, but why not!
 
     // Also assert that the button doesn't render in this case
-    const message = screen.queryByRole("button");
-    expect(message).toBeNull();
+    const button = screen.queryByRole("button");
+    expect(button).toBeNull();
 });
 
 test("Renders a button when isFetchingData is false", () => {
