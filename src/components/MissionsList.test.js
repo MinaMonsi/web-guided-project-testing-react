@@ -19,3 +19,5 @@ test("MissionsList displays mission names when rerendered with new data", () => 
     renderedMissions = screen.getAllByTestId("mission");
     expect(renderedMissions).toHaveLength(4);
 })
+
+const missionsData = 
