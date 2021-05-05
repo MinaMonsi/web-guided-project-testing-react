@@ -1,5 +1,5 @@
 import React from "react";
-import {screen, render} from "@testing-library/react"
+import {fireEvent, screen, render} from "@testing-library/react"
 import MissionForm from "./MissionForm";
 
 // BDD / TDD: write the tests first, then implement the functionality to make the tests go from red to green
@@ -35,6 +35,9 @@ test("Renders a button if not currently fetching data", () => {
 test("Calls getData function on button click", () => {
     const mockGetData = jest.fn(() => { return "hi josh" });
     render(<MissionForm getData={mockGetData} />);
+
+    const button = screen.getByRole("button");
+
 })
 
 // Forget about DRY in your tests
