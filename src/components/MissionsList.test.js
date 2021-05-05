@@ -32,5 +32,5 @@ test("MissionsList displays an error message when the api call fails", () => {
 
     // Simulate a failing api call, leading to a props change that triggers a rerender
     rerender(<MissionsList missions={[]} error="very sad error, apologies for sad" />);
-    errorMessage = screen.getByText(/very sad error, apologies for sad/i); // implicit assertion
+    const errorMessage = screen.getByText(/very sad error, apologies for sad/i); // implicit assertion
 })
