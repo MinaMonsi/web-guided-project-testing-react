@@ -37,7 +37,11 @@ test("Calls getData function on button click", () => {
     render(<MissionForm getData={mockGetData} />);
 
     const button = screen.getByRole("button");
+    fireEvent.click(button);
 
+    // Assert that our mock function was called
+
+    expect()
 })
 
 // Forget about DRY in your tests
