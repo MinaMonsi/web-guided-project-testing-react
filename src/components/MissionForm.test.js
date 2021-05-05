@@ -17,3 +17,7 @@ test("Renders a loading message when isFetchingData is true", () => {
 test("Renders a button when isFetchingData is false", () => {
     render(<MissionForm />);
 })
+
+// Forget about DRY in your tests
+// Instead: AHA - avoid hasty abstractions
+// sometimes, even WET - write everything twice! (ex: renders)
