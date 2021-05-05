@@ -2,7 +2,7 @@ import React from "react";
 import { fireEvent, screen, render } from "@testing-library/react"
 import App from "./App";
 
-import fetchMissions from "./api/fetchMissions";
+import mockFetchMissions from "./api/fetchMissions";
 
 jest.mock("./api/fetchMissions");
 
