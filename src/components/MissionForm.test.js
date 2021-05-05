@@ -40,8 +40,7 @@ test("Calls getData function on button click", () => {
     fireEvent.click(button);
 
     // Assert that our mock function was called
-
-    expect()
+    expect(mockGetData).toHaveBeenCalledTimes(1);
 })
 
 // Forget about DRY in your tests
